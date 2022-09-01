@@ -1,0 +1,120 @@
+import { graphql, useStaticQuery } from "gatsby"
+import PropTypes from "prop-types"
+import React from "react"
+import { Helmet } from "react-helmet"
+
+
+const schema = 
+  {
+      "@context": "https://schema.org",
+      "@type": "VeterinaryCare",
+      "url": "https://kalinavet.com",
+      "logo": "https://kalinavet.com/images/logo-g.png",
+      "name": "Kleintierpraxis|Kalinavet",
+      "contactPoint" : [
+        { "@type" : "ContactPoint",
+          "telephone" : "0048-506-109-445",
+          "contactType" : "termin buchen"
+        } ],
+        "location": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Zasieki, Polska",
+            "postalCode": "68-343",
+            "streetAddress": "Zasieki 75"
+          },
+          "url":"https://kalinavet.com"
+        }, 
+        "founder": {
+          "@type": "Person",
+          "name": "Kalina Adamkiewicz"
+        }
+    }
+
+function SearchEngineOptimization({ description, lang, meta, title }) {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+          }
+        }
+      }
+    `
+  )
+
+  const metaDescription = description || site.siteMetadata.description
+  const defaultTitle = site.siteMetadata?.title
+
+  return (
+    <Helmet
+      htmlAttributes={{
+        lang,
+      }}
+      title={title}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      meta={[
+        {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          property: 'og:image',
+          content:'https://kalinavet.com/images/logo-g.png'
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata?.author || ``,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+      ].concat(meta)}
+    >
+      {/* Schema.org tags */}
+      <script type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+    </Helmet>
+  )
+}
+
+SearchEngineOptimization.defaultProps = {
+  lang: `en`,
+  meta: [],
+  description: ``,
+}
+
+SearchEngineOptimization.propTypes = {
+  description: PropTypes.string,
+  lang: PropTypes.string,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string.isRequired,
+}
+
+export default SearchEngineOptimization

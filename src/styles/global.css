@@ -1,0 +1,79 @@
+@tailwind base;
+
+h1 {
+  @apply text-2xl font-semibold;
+}
+
+h2 {
+  @apply text-xl font-semibold;
+}
+
+h3 {
+  @apply text-lg font-semibold;
+}
+
+a {
+  @apply text-black;
+}
+
+p {
+  @apply font-light;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind forms;
+
+@layer components {
+  .btn-ui {
+    @apply py-2 px-4 bg-ui-red text-white text-center text-sm font-medium rounded-md shadow focus:outline-none focus:ring-2 focus:ring-ui-dark focus:ring-opacity-75 disabled:bg-ui-medium;
+  }
+}
+@layer components{
+  .btn-second{
+    @apply border-gray-700 text-gray-700 border bg-transparent max-w-max mx-auto;
+  }
+}
+
+@layer components {
+  .checkbox-ui {
+    @apply text-ui-dark mr-2 h-4 w-4 focus:ring-ui-dark focus:ring-opacity-25 border border-ui-medium rounded-sm transition duration-150 ease-in-out;
+  }
+}
+
+@layer components {
+  .layout-base {
+    @apply min-h-screen max-w-screen-2xl mx-auto py-12 px-4 sm:py-8 sm:px-6 lg:px-12;
+  }
+}
+@layer base {
+  html {
+    font-family: Montserrat, system-ui, sans-serif;
+  }
+}
+
+.bg-gradient{
+  background: linear-gradient(180deg,#baecfa 60%,#9de4f6);
+}
+@layer components {
+.logo-text-ui {
+  @apply text-ui-red font-bold text-4xl md:text-6xl my-8 md:my-16
+}
+}
+@layer components {
+  .container{
+    @apply max-w-screen-2xl mx-auto py-12 px-4 sm:py-8 sm:px-6 lg:px-12
+  } 
+}
+.logo-text-ui{
+  position: relative;
+}
+.logo-text-ui:after{
+  content:"";
+  width: 50%;
+  height: 3px;
+  display: block;
+    margin-top: 15px;
+  background-color: #F24C3D;
+}
