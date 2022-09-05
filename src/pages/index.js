@@ -9,16 +9,17 @@ const IndexPage = ( ) => {
     <div>
       <SearchEngineOptimization title="Home" />
       <div className="bg-ui-light pb-12 lg:pb-0 w-full px-4 sm:px-6 lg:px-12 bg-gradient">
-        <div className="flex flex-col lg:flex-row items-center max-w-screen-2xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center max-w-screen-2xl mx-auto pt-[100px] md:pt-0" >
           <StaticImage
             src="../images/dog-hero.png"
             alt="A brown dog sitting on the white chair with red cup"
             placeholder="tracedSVG"
-            className="w-[80%] lg:w-1/2 h-auto"
+            className="w-[50%] absolute right-0 top-[50px] md:relative md:top-auto md:w-[80%] lg:w-1/2 h-auto "
             objectFit="contain"
           />
           <div>
-          <h1 className="logo-text-ui">Kleintierpraxis</h1>
+          <h1 className="logo-text-ui">KalinaVet</h1>
+          <p className="mt-2 mb-6 font-normal max-w-[450px]">Herzlich Willkommen bei der <b>Kleintierpraxis</b>. In unserer Kleintierpraxis kümmern wir uns vollumfassend um Ihr Haustier und bieten Ihnen und Ihrem kleinen Liebling ein umfangreiches Leistungsspektrum an.</p>
             <p className="mt-2 text-lg font-normal">Tierarzt</p>
             <p className="mt-0 text-4xl font-normal">Kalina Adamkiewicz</p>
             <Link
@@ -105,7 +106,9 @@ const IndexPage = ( ) => {
       <div className="container my-12 text-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="">
+        <Link to="/kontakt">
           <div className="bg-ui-red w-24 h-24 rounded-full mx-auto p-4">
+         
             <StaticImage
               src="../images/vet-calender.png"
               alt="Medicine"
@@ -117,8 +120,9 @@ const IndexPage = ( ) => {
           <h2 className="text-3xl">Termin</h2>
           <p>Montag bis Freitag.</p>
           <p>
-            Termin nur nach telefonischer Terminvereinbarung. 
+          Bitte rufen Sie uns an, um einen Termin zu vereinbaren. 
           </p>
+        </Link>
         </div>
         <div className="">
           <div className="bg-ui-red w-24 h-24 rounded-full mx-auto p-4">
