@@ -58,7 +58,7 @@ p {
 }
 @layer components {
 .logo-text-ui {
-  @apply text-ui-red font-bold text-4xl md:text-6xl my-8 md:my-16
+  @apply text-ui-red font-bold text-4xl md:text-6xl mt-8 mb-4 md:mt-16 md:mb-8;
 }
 }
 @layer components {

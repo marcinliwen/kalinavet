@@ -123,7 +123,7 @@ const Header = () => {
                {/*  <HeaderLink to="/products" text="Haustierproducte" />
                 <HeaderLink to="/collections" text="Kategorie" /> */}
                 <HeaderLink to="/leistungen" text="Leistungen" />
-                <HeaderLink text="Uber Uns"/>
+                <HeaderLink text="Über Uns"/>
                 <HeaderLink text="Blog"/>
                 
               </div>

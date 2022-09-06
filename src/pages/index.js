@@ -1,15 +1,14 @@
-import { graphql, Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import React from "react"
-import SearchEngineOptimization from "../components/seo"
+import { graphql, Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
+import SearchEngineOptimization from "../components/seo";
 
-const IndexPage = ( ) => {
-
+const IndexPage = () => {
   return (
     <div>
       <SearchEngineOptimization title="Home" />
       <div className="bg-ui-light pb-12 lg:pb-0 w-full px-4 sm:px-6 lg:px-12 bg-gradient">
-        <div className="flex flex-col lg:flex-row items-center max-w-screen-2xl mx-auto pt-[100px] md:pt-0" >
+        <div className="flex flex-col lg:flex-row items-center max-w-screen-2xl mx-auto pt-[100px] md:pt-0">
           <StaticImage
             src="../images/dog-hero.png"
             alt="A brown dog sitting on the white chair with red cup"
@@ -18,13 +17,18 @@ const IndexPage = ( ) => {
             objectFit="contain"
           />
           <div>
-          <h1 className="logo-text-ui">KalinaVet</h1>
-          <p className="mt-2 mb-6 font-normal max-w-[450px]">Herzlich Willkommen bei der <b>Kleintierpraxis</b>. In unserer Kleintierpraxis kümmern wir uns vollumfassend um Ihr Haustier und bieten Ihnen und Ihrem kleinen Liebling ein umfangreiches Leistungsspektrum an.</p>
-            <p className="mt-2 text-lg font-normal">Tierarzt</p>
-            <p className="mt-0 text-4xl font-normal">Kalina Adamkiewicz</p>
+            <h1 className="logo-text-ui">Kalina Vet</h1>
+            <p className="mt-2  font-normal max-w-[450px]">
+              Herzlich Willkommen bei der <b>Kleintierpraxis</b> in Zasieki. In
+              unserer Kleintierpraxis kümmern wir uns vollumfassend um Ihr
+              Haustier und bieten Ihnen und Ihrem kleinen Liebling ein
+              umfangreiches Leistungsspektrum an.
+            </p>
+            {/*  <p className="mt-2 text-lg font-normal">Tierarzt</p>
+            <p className="mt-0 text-5xl font-normal">Kalina Adamkiewicz</p> */}
             <Link
               to="/kontakt"
-              className="btn-ui mt-4 min-w-full lg:min-w-0 inline-block"
+              className="btn-ui mt-16 min-w-full lg:min-w-0 inline-block"
             >
               Termin Buchen
             </Link>
@@ -33,7 +37,24 @@ const IndexPage = ( ) => {
       </div>
       <div className="bg-ui-red">
         <div className="container">
-          <div className="grid grid-col-1 md:grid-cols-4 justify-center gap-8 flex-wrap text-white  text-xl ">
+          <div className="flex flex-col lg:flex-row items-center max-w-screen-2xl mx-auto">
+
+          <div className="pt-8 pb-4 md:w-[50%]">
+            <p className="text-white  text-xl max-w-[600px] mt-8 mb-8 mr-auto">
+              In unserer Kleintierpraxis kümmern wir uns vollumfassend um Ihr
+              Haustier und bieten Ihnen und Ihrem kleinen Liebling den
+              besonderen Service – von der Vorsorge bis zur
+              Ultraschalluntersuchung.
+            </p>
+
+            <Link
+              to="/leistungen"
+              className="block md:mr-auto md:ml-0 text-center text-white btn-ui btn-second border-white"
+            >
+              Lernen Sie alle unsere Services kennen
+            </Link>
+          </div>
+          <div className="grid grid-col-1 md:grid-cols-2 justify-center gap-8 flex-wrap text-white  text-xl md:w-[50%]">
             {/*  <div className="w-[350px] text-center ">
             <Link to="/kontakt">
             <StaticImage 
@@ -46,6 +67,7 @@ const IndexPage = ( ) => {
               <p>Termin nur nach telefonischer Terminvereinbarung</p>
               </Link>
           </div> */}
+
             <div className="w-[350px] max-w-full text-center">
               <Link to="/kontakt">
                 <StaticImage
@@ -101,63 +123,68 @@ const IndexPage = ( ) => {
               <p>Medikamenten</p>
             </div>
           </div>
+          
+          </div>
         </div>
       </div>
       <div className="container my-12 text-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="">
-        <Link to="/kontakt">
-          <div className="bg-ui-red w-24 h-24 rounded-full mx-auto p-4">
-         
-            <StaticImage
-              src="../images/vet-calender.png"
-              alt="Medicine"
-              placeholder="tracedSVG"
-              objectFit="contain"
-              className="w-16"
-            />
+          <div className="">
+            <Link to="/kontakt">
+              <div className="bg-ui-red w-24 h-24 rounded-full mx-auto p-4">
+                <StaticImage
+                  src="../images/vet-calender.png"
+                  alt="Medicine"
+                  placeholder="tracedSVG"
+                  objectFit="contain"
+                  className="w-16"
+                />
+              </div>
+              <h2 className="text-3xl">Termin</h2>
+              <p>Montag bis Freitag.</p>
+              <p>Bitte rufen Sie uns an, um einen Termin zu vereinbaren.</p>
+            </Link>
           </div>
-          <h2 className="text-3xl">Termin</h2>
-          <p>Montag bis Freitag.</p>
-          <p>
-          Bitte rufen Sie uns an, um einen Termin zu vereinbaren. 
-          </p>
-        </Link>
-        </div>
-        <div className="">
-          <div className="bg-ui-red w-24 h-24 rounded-full mx-auto p-4">
-            <StaticImage
-              src="../images/location.png"
-              alt="Medicine"
-              placeholder="tracedSVG"
-              objectFit="contain"
-              className="w-16"
-            />
+          <div className="">
+            <a href="https://goo.gl/maps/5vwZ1Veo9Y9zDGsC9" target="_blank">
+              <div className="bg-ui-red w-24 h-24 rounded-full mx-auto p-4">
+                <StaticImage
+                  src="../images/location.png"
+                  alt="Medicine"
+                  placeholder="tracedSVG"
+                  objectFit="contain"
+                  className="w-16"
+                />
+              </div>
+              <h2 className="text-3xl">Neue Adresse</h2>
+              <p>Zasieki 75</p>
+            </a>
           </div>
-          <h2 className="text-3xl">Neue Adresse</h2>
-          <p>Zasieki 75</p>
-        </div>
-        <div className="">
-          <div className="bg-ui-red w-24 h-24 rounded-full mx-auto p-4">
-            <StaticImage
-              src="../images/pet-shop.png"
-              alt="pet shop"
-              placeholder="tracedSVG"
-              objectFit="contain"
-              className="w-16"
-            />
-          </div>
+          <div className="">
+            <div className="bg-ui-red w-24 h-24 rounded-full mx-auto p-4">
+              <StaticImage
+                src="../images/pet-shop.png"
+                alt="pet shop"
+                placeholder="tracedSVG"
+                objectFit="contain"
+                className="w-16"
+              />
+            </div>
 
-          <h2 className="text-3xl">Online Shop</h2>
-          {/* <p><b>Medikamente</b> nur für Praxispatienten</p> */}
-          <p><b>Haustierprodukte</b></p>
-          <p className="uppercase font-semibold text-ui-red"><b>demnächst</b></p>
-          {/* <p><b>Zahlung</b> per Karte oder Nachnahme</p>
+            <h2 className="text-3xl">Online Shop</h2>
+            {/* <p><b>Medikamente</b> nur für Praxispatienten</p> */}
+            <p>
+              <b>Haustierprodukte</b>
+            </p>
+            <p className="uppercase font-semibold text-ui-red">
+              <b>demnächst</b>
+            </p>
+            {/* <p><b>Zahlung</b> per Karte oder Nachnahme</p>
           <p><b>Abholung</b> in der Praxis oder Apotheke</p> */}
-        </div>
+          </div>
         </div>
       </div>
-     {/*  <div className="layout-base my-12 min-h-0">
+      {/*  <div className="layout-base my-12 min-h-0">
         <Grid
           title={"Producte"}
           cta={{ to: "/products", text: "Alle Produkte" }}
@@ -183,8 +210,7 @@ const IndexPage = ( ) => {
         </div>
       </div> */}
     </div>
-  )
-}
+  );
+};
 
-
-export default IndexPage
+export default IndexPage;

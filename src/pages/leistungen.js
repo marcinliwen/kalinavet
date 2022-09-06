@@ -31,6 +31,23 @@ const Leistungen = () => {
               <p>Termin nur nach telefonischer Terminvereinbarung</p>
               </Link>
           </div> */} 
+          <div className="max-w-[800px] w-full text-center">
+              <div className="block mb-4">
+              <div className="w-[96px] h-[96px] flex items-center justify-center bg-ui-red rounded-full p-2 mx-auto">
+                <StaticImage
+                  src="../images/firstvisit.png"
+                  alt="Erstbesuch"
+                  placeholder="tracedSVG"
+                  objectFit="contain"
+                  className="w-16 "
+                />
+                 </div>
+                <p>Erstbesuch</p>
+              </div>
+             
+              <p className="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            </div>
             <div className="max-w-[800px] w-full text-center">
               <Link to="/kontakt" className="block mb-4">
               <div className="w-[96px] h-[96px] flex items-center justify-center bg-ui-red rounded-full p-2 mx-auto">
@@ -106,6 +123,23 @@ const Leistungen = () => {
               </div>
               <p>Medikamenten</p>
               </div>
+              <p className="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            </div>
+            <div className="max-w-[800px] w-full text-center">
+            <div className="block mb-4">
+              <div className="w-[96px] h-[96px] flex items-center justify-center bg-ui-red rounded-full p-2 mx-auto">
+                <StaticImage
+                  src="../images/usg.png"
+                  alt="Ultraschalluntersuchung"
+                  placeholder="tracedSVG"
+                  objectFit="contain"
+                  className="w-16 "
+                />
+                 </div>
+                <p>Ultraschalluntersuchung</p>
+              </div>
+             
               <p className="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
             </div>

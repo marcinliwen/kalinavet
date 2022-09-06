@@ -109,7 +109,7 @@ const MobileMenu = ({ open, setOpen }) => {
                 className="-m-2 p-2 block font-medium text-gray-900"
                 onClick={() => setOpen(false)}
               >
-                Uber Uns
+                Über Uns
               </Link>
               <Link
                 to={""}
