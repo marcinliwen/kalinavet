@@ -1,0 +1,13 @@
+User-agent: Googlebot
+
+Sitemap: https://kalinavet.com/sitemap/sitemap-index.xml
+
+User-agent: *
+Disalow: /products
+Disalow: /products/
+Disalow: /faq
+Disalow: /collections
+Disalow: /collections/
+Disalow: /germany/
+Disalow: /create-return
+Disalow: /terms-and-conditions
