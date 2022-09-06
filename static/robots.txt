@@ -3,11 +3,11 @@ User-agent: Googlebot
 Sitemap: https://kalinavet.com/sitemap/sitemap-index.xml
 
 User-agent: *
-Disalow: /products
-Disalow: /products/
-Disalow: /faq
-Disalow: /collections
-Disalow: /collections/
-Disalow: /germany/
-Disalow: /create-return
-Disalow: /terms-and-conditions
+Disallow: /products
+Disallow: /products/
+Disallow: /faq
+Disallow: /collections
+Disallow: /collections/
+Disallow: /germany/
+Disallow: /create-return
+Disallow: /terms-and-conditions
