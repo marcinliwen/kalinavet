@@ -9,13 +9,16 @@ const IndexPage = () => {
       <SearchEngineOptimization title="Home" />
       <div className="bg-ui-light pb-12 lg:pb-0 w-full px-4 sm:px-6 lg:px-12 bg-gradient">
         <div className="flex flex-col lg:flex-row items-center max-w-screen-2xl mx-auto pt-[100px] md:pt-0">
+          <div className="w-[50%] absolute right-0 top-[50px] md:relative md:top-auto md:w-[80%] lg:w-1/2 h-auto ">
           <StaticImage
             src="../images/dog-hero.png"
             alt="A brown dog sitting on the white chair with red cup"
             placeholder="tracedSVG"
-            className="w-[50%] absolute right-0 top-[50px] md:relative md:top-auto md:w-[80%] lg:w-1/2 h-auto "
+            
             objectFit="contain"
           />
+          </div>
+         
           <div>
             <h1 className="logo-text-ui">Kalina Vet</h1>
             <p className="mt-2  font-normal max-w-[450px]">
@@ -39,8 +42,8 @@ const IndexPage = () => {
         <div className="container">
           <div className="flex flex-col lg:flex-row items-center max-w-screen-2xl mx-auto">
 
-          <div className="pt-8 pb-4 md:w-[50%]">
-            <p className="text-white  text-xl max-w-[600px] mt-8 mb-8 mr-auto">
+          <div className="pb-4 md:w-[50%]">
+            <p className="text-white  max-w-[600px] mb-8 mr-auto">
               In unserer Kleintierpraxis kümmern wir uns vollumfassend um Ihr
               Haustier und bieten Ihnen und Ihrem kleinen Liebling den
               besonderen Service – von der Vorsorge bis zur
@@ -49,7 +52,7 @@ const IndexPage = () => {
 
             <Link
               to="/leistungen"
-              className="block md:mr-auto md:ml-0 text-center text-white btn-ui btn-second border-white"
+              className="block md:mr-auto md:ml-0 text-center text-white btn-ui btn-second border-white shadow-[#bf12029c]"
             >
               Lernen Sie alle unsere Services kennen
             </Link>
