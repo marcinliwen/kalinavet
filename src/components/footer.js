@@ -40,8 +40,8 @@ const Footer = () => {
     }
   ]
   return (
-    <footer>
-      <div className="bg-ui-black px-4 pt-24 pb-4 sm:px-6 lg:px-8 border-t border-ui-medium flex items-start md:items-center justify-between text-sm">
+    <footer >
+      <div className="bg-ui-black px-4 pb-16 pt-24 md:pb-4 sm:px-6 lg:px-8 border-t border-ui-medium flex items-start md:items-center justify-between text-sm">
         <div className="flex flex-col md:flex-row md:items-center">
           {main_internals.map(internal => {
             return (

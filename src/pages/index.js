@@ -42,22 +42,8 @@ const IndexPage = () => {
         <div className="container">
           <div className="flex flex-col lg:flex-row items-center max-w-screen-2xl mx-auto">
 
-          <div className="pb-4 md:w-[50%]">
-            <p className="text-white  max-w-[600px] mb-8 mr-auto">
-              In unserer Kleintierpraxis kümmern wir uns vollumfassend um Ihr
-              Haustier und bieten Ihnen und Ihrem kleinen Liebling den
-              besonderen Service – von der Vorsorge bis zur
-              Ultraschalluntersuchung.
-            </p>
-
-            <Link
-              to="/leistungen"
-              className="block md:mr-auto md:ml-0 text-center text-white btn-ui btn-second border-white shadow-[#bf12029c]"
-            >
-              Lernen Sie alle unsere Services kennen
-            </Link>
-          </div>
-          <div className="grid grid-col-1 md:grid-cols-2 justify-center gap-8 flex-wrap text-white  text-xl md:w-[50%]">
+          
+          <div className="grid grid-col-1 md:grid-cols-5 justify-center gap-8 flex-wrap text-white  text-xl ">
             {/*  <div className="w-[350px] text-center ">
             <Link to="/kontakt">
             <StaticImage 
@@ -125,8 +111,16 @@ const IndexPage = () => {
               />
               <p>Medikamenten</p>
             </div>
-          </div>
+            
+            <Link
+              to="/leistungen"
+              className=" max-w-[200px] items-center  flex md:mr-auto md:ml-0 text-center text-white btn-ui btn-second border-white shadow-[#bf12029c]"
+            >
+              Lernen Sie alle unsere Services kennen
+            </Link>
           
+          </div>
+        
           </div>
         </div>
       </div>

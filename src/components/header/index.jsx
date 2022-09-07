@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React, { useState } from "react"
+import React, { useState, useEffect} from "react"
 import Logo from "../../icons/logo.svg"
 //import AccountPopover from "./account-popover"
 ////import Banner from "./banner"
@@ -82,9 +82,30 @@ const mockData = {
   ],
 }
 
+const isWindowAvailable = typeof window !== "undefined"
+
+const getPosition = () => isWindowAvailable ? window.pageYOffset : undefined
+
 const Header = () => {
   const [open, setOpen] = useState(false)
   
+  const [scrollPosition, setScrollPosition] = useState(getPosition())
+
+  useEffect(() => {
+    if (!isWindowAvailable) {
+      return false
+    }
+
+    const handleScroll = () => {
+      setScrollPosition(getPosition())
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => window.removeEventListener("scroll", handleScroll)
+   
+  }, [])
+
   return (
     <div className="sticky top-0 z-20">
       <header className="relative bg-white">
@@ -139,14 +160,18 @@ const Header = () => {
             </div>
            {/*  <AccountPopover customer={mockData.customer} /> */}
           </div>
-          {/* <CartPopover cart={mockData.cart} /> */}
-           {/*  <div className="hidden lg:flex">
-              <RegionPopover regions={mockData.regions} />
-              <AccountPopover customer={mockData.customer} />
-            </div>
-            <CartPopover cart={mockData.cart} /> */}
           </div>
         </nav>
+
+                <div className={` ${scrollPosition > 490 ? 'bottom-0':'bottom-[-100%]'} transition-all duration-300 ease-in-ou md:hidden fixed  left-0 right-0 bg-white px-4 py-1`}>
+                <Link
+              to="/kontakt"
+              className=" btn-ui lg:min-w-0 inline-block min-w-full "
+            >
+              Termin Buchen
+            </Link>
+                </div>
+      
       </header>
     </div>
   )
