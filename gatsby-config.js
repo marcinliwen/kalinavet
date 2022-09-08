@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Kalina-Vet`,
-    description: `Kalina-Vet, Kleintierarztpraxis - Zasieki`,
+    description: `Kalina-Vet, Tierarzt - Zasieki`,
     author: `liwen.marcin@gmail.com`,
     siteUrl: `https://kalinavet.com/`,
   },
