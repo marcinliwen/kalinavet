@@ -2,6 +2,7 @@ import { graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import SearchEngineOptimization from "../components/seo";
+import Officecounter from "../components/Officecounter";
 
 const IndexPage = () => {
   return (
@@ -57,7 +58,7 @@ const IndexPage = () => {
               </Link>
           </div> */}
 
-            <div className="w-[350px] max-w-full text-center">
+            <div className="md:max-w-[350px] w-full md:w-[350px] text-center">
               <Link to="/kontakt">
                 <StaticImage
                   src="../images/profilaktyka.png"
@@ -81,7 +82,7 @@ const IndexPage = () => {
             <p>Neue Adresse: <br />Zasieki 75</p>
             </Link>
           </div> */}
-            <div className="w-[350px] max-w-full text-center">
+            <div className="md:max-w-[350px] w-full md:w-[350px] text-center">
               <StaticImage
                 src="../images/medical-report.png"
                 alt="Untersuchung"
@@ -91,7 +92,7 @@ const IndexPage = () => {
               />
               <p>Untersuchung</p>
             </div>
-            <div className="w-[350px] max-w-full text-center">
+            <div className="md:max-w-[350px] w-full md:w-[350px] text-center">
               <StaticImage
                 src="../images/scalpel.png"
                 alt="Chirurgie"
@@ -101,7 +102,7 @@ const IndexPage = () => {
               />
               <p>Chirurgie</p>
             </div>
-            <div className="w-[350px] max-w-full text-center">
+            <div className="md:max-w-[350px] w-full md:w-[350px] text-center">
               <StaticImage
                 src="../images/medicine.png"
                 alt="Medicine"
@@ -143,7 +144,7 @@ const IndexPage = () => {
             </Link>
           </div>
           <div className="">
-            <a href="https://goo.gl/maps/5vwZ1Veo9Y9zDGsC9" target="_blank">
+            <a href="https://goo.gl/maps/RhWSeY2qMm7NY9eS9" target="_blank">
               <div className="bg-ui-red w-24 h-24 rounded-full mx-auto p-4">
                 <StaticImage
                   src="../images/location.png"
@@ -154,6 +155,7 @@ const IndexPage = () => {
                 />
               </div>
               <h2 className="text-3xl">Neue Adresse</h2>
+              <p>Tierarzt in Zasieki</p>
               <p>Zasieki 75</p>
             </a>
           </div>
@@ -180,6 +182,32 @@ const IndexPage = () => {
           <p><b>Abholung</b> in der Praxis oder Apotheke</p> */}
           </div>
         </div>
+      </div>
+      <div className="my-24 bg-ui-light">
+      <div className="container ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="md:col-span-2">
+          <h2 class="text-3xl mb-8 ">Über Uns</h2>
+            <p className="max-w-[700px] mb-4"><strong>Kalina Adamkiewicz</strong> ist Tierärztin und Inhaberin einer Tierarztpraxis in Zasieki. Darüber hinaus absolvierte sie auch eine Spezialisierung in Kleintierchirurgie. Sie hat an zahlreichen Weiterbildungen in der Veterinärmedizin teilgenommen.</p>
+            <p className="max-w-[700px]">Sie verbessert ständig ihre Qualifikationen, um Ihren Haustieren so viel wie möglich zu helfen.</p>
+            <Officecounter />
+            {/* <Link to='/uber-uns'
+            class="mr-4  btn-ui btn-second text-sm font-medium text-gray-700 hover:text-gray-600">
+              Finde mehr heraus
+            </Link> */}
+        </div>
+        <div>
+        <StaticImage
+                src="../images/kitty.png"
+                alt="Kitty"
+                placeholder=""
+                objectFit="contain"
+                className=""
+              />
+        </div>
+        </div>
+       
+      </div>
       </div>
       {/*  <div className="layout-base my-12 min-h-0">
         <Grid
